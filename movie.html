@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <title>Your Movie</title>
+        <link rel="stylesheet" href="main2.css">
+        <script>
+            function setSrc(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('id');
+                var ele = `       <video width="900" height="600" controls autoplay loop>
+            <source id="videos" src="video/${myParam}.mkv">
+            <div class="controls">
+                <div class="orange-bar">
+                    <div class="orange-juice"></div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="play/pause"></button>
+                </div>
+                
+            </div>
+        </video>`
+                document.getElementById("video").innerHTML=ele;
+            console.log(myParam);
+            }
+        </script>
+    </head>
+    <style>
+        video{
+            margin-top: 50px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: 100px;
+        }
+
+    </style>
+    <body onload="setSrc()">
+         <header>
+        <nav>
+            <a href="file:///C:/Data/startup/website%201.2/index2.html" class="logo"><span><u><i><b>S.Hub|Hacker</b></i></u></span></a>
+        </nav>
+             <div id="video"></div>
+ 
+             <h4 id="head"><i><u>Movie name</u></i></h4>
+        </header>
+            <footer>
+        <div class="copy">
+            <a href="a" class="logo">S.hub|Hacker</a>
+            <p>all rights reserved by s.hub|hacker</p>
+        </div>
+        <ul>
+            <li><a href="a">Accounts</a></li>
+            <li><a href="a">Help</a></li>
+            <li><a href="a">terms</a></li>
+            <li><a href="a">Privacy</a></li>
+        </ul>
+    </footer>
+    </body>
+</html>
